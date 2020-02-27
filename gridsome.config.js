@@ -1,6 +1,6 @@
 module.exports = {
-  siteName: 'Gridsome Bulma Starter',
-  siteDescription: 'A baseline Gridsome starter to get you going with Bulma.',
+  siteName: "Horace, Radice and Associates",
+  siteDescription: "Personal Injury & Business Law Attorneys",
 
   templates: {
     Post: "/:title",
