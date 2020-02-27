@@ -20,15 +20,15 @@
 
         <div class="navbar-menu" :class="{ 'is-active': showNav }">
           <div class="navbar-end">
-            <g-link class="navbar-item" to="/about">
-              About
+            <g-link class="navbar-item" to="/attorneys/">
+              Attorneys
             </g-link>
-            <a
-              class="navbar-item"
-              href="//github.com/calebanthony/gridsome-bulma"
-            >
-              GitHub
-            </a>
+            <g-link class="navbar-item" to="/practice-areas/">
+              Practice Areas
+            </g-link>
+            <g-link class="navbar-item" to="/contact/">
+              Contact
+            </g-link>
           </div>
         </div>
       </div>
