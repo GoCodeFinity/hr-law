@@ -40,7 +40,10 @@
 
     <footer class="footer has-text-centered">
       <span>Copyright © {{ new Date().getFullYear() }}. </span>
-      <span>Powered by <a href="//gridsome.org"> Gridsome </a></span>
+      <span
+        >Powered by <a href="//gridsome.org"> Gridsome</a> &amp;
+        <a href="//codefinity.tech">CodeFinity</a></span
+      >
     </footer>
   </div>
 </template>
