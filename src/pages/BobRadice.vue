@@ -6,11 +6,11 @@
 
     <section>
       <h2 class="subtitle">About Mr. Radice</h2>
-      <figure class="image is-256x256">
+      <figure class="image is-256x256 is-pulled-left">
         <g-image
           src="~/assets/images/bob-radice.jpg"
           alt="Bronze skinned male with dark hair in a white shirt with striped red tie and a pinstripe dark colored suit."
-          width="256"
+          width="350"
         />
       </figure>
       <p>
@@ -49,16 +49,16 @@
     </section>
 
     <section>
-      <h2>Practice Areas</h2>
-      <ul>
-        <li>Personal Injury</li>
-        <li>Wrongful Death</li>
-        <li>Automobile & Truck Accidents</li>
-        <li>Automobile Insurance Policy Claims</li>
-        <li>Workers’ Compensation</li>
-        <li>Premises Liability</li>
-        <li>Medical Malpractice</li>
-        <li>Products Liability</li>
+      <h2 class="subtitle is-size-4-mobile">Practice Areas</h2>
+      <ul class="list has-background-grey-dark">
+        <li class="list-item">Personal Injury</li>
+        <li class="list-item">Wrongful Death</li>
+        <li class="list-item">Automobile & Truck Accidents</li>
+        <li class="list-item">Automobile Insurance Policy Claims</li>
+        <li class="list-item">Workers’ Compensation</li>
+        <li class="list-item">Premises Liability</li>
+        <li class="list-item">Medical Malpractice</li>
+        <li class="list-item">Products Liability</li>
       </ul>
     </section>
   </Layout>
