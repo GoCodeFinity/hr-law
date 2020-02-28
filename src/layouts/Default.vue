@@ -53,11 +53,11 @@
               >legal services for small and medium-sized businesses.</strong
             >
           </p>
-          <button class="button is-link is-inverted">
-            <g-link to="/contact/" class="is-uppercase has-text-weight-bold"
-              >Contact Us!</g-link
-            >
-          </button>
+          <g-link
+            to="/contact/"
+            class="button is-link is-inverted is-uppercase has-text-weight-bold"
+            >Contact Us!</g-link
+          >
         </div>
       </div>
     </section>
