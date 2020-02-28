@@ -43,17 +43,21 @@
     </section>
 
     <section>
-      <h2>Practice Areas</h2>
-      <ul>
-        <li>Commercial Litigation</li>
-        <li>Construction (Litigation, Contracts and Mechanic Liens)</li>
-        <li>Real Estate</li>
-        <li>Shareholder Disputes</li>
-        <li>Business Organizations (including LLCs and Partnerships)</li>
-        <li>Business Acquisitions and Sales</li>
-        <li>Commercial Transactions</li>
-        <li>Subrogation</li>
-        <li>Arbitration/Mediation</li>
+      <h2 class="subtitle">Practice Areas</h2>
+      <ul class="list has-background-grey-dark">
+        <li class="list-item">Commercial Litigation</li>
+        <li class="list-item">
+          Construction (Litigation, Contracts and Mechanic Liens)
+        </li>
+        <li class="list-item">Real Estate</li>
+        <li class="list-item">Shareholder Disputes</li>
+        <li class="list-item">
+          Business Organizations (including LLCs and Partnerships)
+        </li>
+        <li class="list-item">Business Acquisitions and Sales</li>
+        <li class="list-item">Commercial Transactions</li>
+        <li class="list-item">Subrogation</li>
+        <li class="list-item">Arbitration/Mediation</li>
       </ul>
     </section>
   </Layout>
