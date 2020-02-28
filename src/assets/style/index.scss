@@ -6,3 +6,33 @@
 
 /** Import overrides */
 @import "overrides";
+
+.hero {
+  background: url("https://res.cloudinary.com/codefinity/image/upload/w_768/v1582854242/hero.jpg")
+    center center no-repeat;
+  background-size: cover;
+
+  @media screen and (min-width: $tablet) {
+    background: url("https://res.cloudinary.com/codefinity/image/upload/w_960/v1582854242/hero.jpg")
+      center center no-repeat;
+    background-size: cover;
+  }
+
+  @media screen and (min-width: $desktop) {
+    background: url("https://res.cloudinary.com/codefinity/image/upload/w_1152/v1582854242/hero.jpg")
+      center center no-repeat;
+    background-size: cover;
+  }
+
+  @media screen and (min-width: $widescreen) {
+    background: url("https://res.cloudinary.com/codefinity/image/upload/w_1344/v1582854242/hero.jpg")
+      center center no-repeat;
+    background-size: cover;
+  }
+
+  @media screen and (min-width: $fullhd) {
+    background: url("https://res.cloudinary.com/codefinity/image/upload/w_2560/v1582854242/hero.jpg")
+      center center no-repeat;
+    background-size: cover;
+  }
+}
