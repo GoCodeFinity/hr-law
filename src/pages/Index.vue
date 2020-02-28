@@ -1,7 +1,9 @@
 <template>
   <Layout :showHero="true">
     <h2 class="title is-2 is-size-4-mobile">Injury &amp; Wrongful Death</h2>
-    <h3 class="subtitle is-4 is-size-5-mobile">Robert J. Radice</h3>
+    <h3 class="subtitle is-4 is-size-5-mobile">
+      <g-link to="/bob-radice">J. Radice</g-link>
+    </h3>
     <p>
       Under the leadership of Robert J. Radice, our firm has over 35 years of
       experience representing individuals that have been seriously injured, as
@@ -11,7 +13,9 @@
     </p>
 
     <h2 class="title is-2 is-size-4-mobile">Business Law</h2>
-    <h3 class="subtitle is-4 is-size-5-mobile">John M. Horas</h3>
+    <h3 class="subtitle is-4 is-size-5-mobile">
+      <g-link to="/jack-horas/"> M. Horas</g-link>
+    </h3>
     <p>
       Under the leadership of John M. Horas, our firm has more than 30 years of
       experience in representing small-to-medium sized businesses in every
