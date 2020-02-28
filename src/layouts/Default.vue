@@ -37,7 +37,7 @@
       </div>
     </nav>
 
-    <section class="hero" v-if="showHero">
+    <section v-if="showHero" class="hero">
       <div class="hero-body">
         <div class="container">
           <p class="is-size-7">
