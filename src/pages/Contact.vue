@@ -19,13 +19,17 @@
                 type="text"
                 name="fname"
                 required
-                @blur="$v.event.category.$touch()"
+                @blur="$v.fname.$touch"
               />
             </div>
             <!--.control  -->
-            <p v-show="!$v.fname.required" class="help is-danger">
-              First name is required! 🙇🏽‍♀️
-            </p>
+
+            <!-- Must use 'v-if' and not 'v-if'. -->
+            <template v-if="$v.fname.$error">
+              <p v-if="!$v.fname.required" class="help is-danger">
+                First name is required! 🙇🏽‍♀️
+              </p>
+            </template>
           </div>
           <!-- .field -->
 
@@ -39,12 +43,15 @@
                 type="text"
                 name="lname"
                 required
+                @blur="$v.lname.$touch"
               />
             </div>
             <!-- .control -->
-            <p v-show="!$v.lname.required" class="help is-danger">
-              Last name is required! 🙇🏽‍♀️
-            </p>
+            <template v-if="$v.lname.$error">
+              <p v-if="!$v.lname.required" class="help is-danger">
+                Last name is required! 🙇🏽‍♀️
+              </p>
+            </template>
           </div>
           <!-- field -->
 
@@ -54,11 +61,12 @@
               <input
                 id="email"
                 v-model="email"
-                class="input is-danger has-text-black"
+                class="input has-text-black"
                 type="email"
                 name="email"
                 required
                 placeholder="✉️"
+                @blur="$v.email.$touch"
               />
               <span class="icon is-small is-left">
                 <i class="fas fa-envelope" />
@@ -67,12 +75,14 @@
                 <i class="fas fa-exclamation-triangle" />
               </span>
             </div>
-            <p v-show="!$v.email.required" class="help is-danger">
-              Email is required! 🙇🏽‍♂️
-            </p>
-            <p v-show="!$v.email.email" class="help is-danger">
-              This email is invalid! 😞
-            </p>
+            <template v-if="$v.email.$error">
+              <p v-if="!$v.email.required" class="help is-danger">
+                Email is required! 🙇🏽‍♂️
+              </p>
+              <p v-if="!$v.email.email" class="help is-danger">
+                This email is invalid! 😞
+              </p>
+            </template>
           </div>
           <!-- .field -->
         </div>
@@ -89,15 +99,18 @@
                 rows="8"
                 name="msg"
                 required
+                @blur="$v.msg.$touch"
               />
             </div>
             <!-- .control -->
-            <p v-show="!$v.msg.required" class="help is-danger">
-              Please provide a few details!
-            </p>
-            <p v-show="!$v.msg.minLength" class="help is-danger">
-              Please provide a little more detail... ✍️
-            </p>
+            <template v-if="$v.msg.$error">
+              <p v-if="!$v.msg.required" class="help is-danger">
+                Please provide a few details!
+              </p>
+              <p v-if="!$v.msg.minLength" class="help is-danger">
+                Please provide a little more detail... ✍️
+              </p>
+            </template>
           </div>
           <!-- .field -->
         </div>
@@ -114,6 +127,7 @@
               type="checkbox"
               name="agreed"
               required
+              @blur="$v.agreed.$touch"
             />
             I understand that private information should not be included in my
             message because we cannot guarantee the security and confidentiality
@@ -121,9 +135,11 @@
           </label>
         </div>
         <!-- .control -->
-        <p v-show="!agreed" class="help is-danger">
-          Please confirm 👆🏽!
-        </p>
+        <template v-if="$v.agreed.$error">
+          <p v-if="!agreed" class="help is-danger">
+            Please confirm 👆🏽!
+          </p>
+        </template>
       </div>
       <!-- .field -->
 
