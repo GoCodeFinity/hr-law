@@ -20,20 +20,20 @@
             <div class="control">
               <input
                 id="fname"
-                v-model="fname"
+                v-model="formData.fname"
                 class="input has-text-black"
                 type="text"
                 name="fname"
                 required
-                @blur="$v.fname.$touch"
+                @blur="$v.formData.fname.$touch"
               />
             </div>
             <!--.control  -->
 
             <!-- Must use 'v-if' and not 'v-if'. -->
             <transition name="slide-fade" mode="out-in">
-              <template v-if="$v.fname.$error">
-                <p v-if="!$v.fname.required" class="help is-danger">
+              <template v-if="$v.formData.fname.$error">
+                <p v-if="!$v.formData.fname.required" class="help is-danger">
                   First name is required! 🙇🏽‍♀️
                 </p>
               </template>
@@ -46,18 +46,18 @@
             <div class="control">
               <input
                 id="lname"
-                v-model="lname"
+                v-model="formData.lname"
                 class="input has-text-black"
                 type="text"
                 name="lname"
                 required
-                @blur="$v.lname.$touch"
+                @blur="$v.formData.lname.$touch"
               />
             </div>
             <!-- .control -->
             <transition name="slide-fade" mode="out-in">
-              <template v-if="$v.lname.$error">
-                <p v-if="!$v.lname.required" class="help is-danger">
+              <template v-if="$v.formData.lname.$error">
+                <p v-if="!$v.formData.lname.required" class="help is-danger">
                   Last name is required! 🙇🏽‍♀️
                 </p>
               </template>
@@ -70,27 +70,21 @@
             <div class="control has-icons-left has-icons-right">
               <input
                 id="email"
-                v-model="email"
+                v-model="formData.email"
                 class="input has-text-black"
                 type="email"
                 name="email"
                 required
                 placeholder="✉️"
-                @blur="$v.email.$touch"
+                @blur="$v.formData.email.$touch"
               />
-              <span class="icon is-small is-left">
-                <i class="fas fa-envelope" />
-              </span>
-              <span class="icon is-small is-right">
-                <i class="fas fa-exclamation-triangle" />
-              </span>
             </div>
             <transition name="slide-fade" mode="out-in">
-              <template v-if="$v.email.$error">
-                <p v-if="!$v.email.required" class="help is-danger">
+              <template v-if="$v.formData.email.$error">
+                <p v-if="!$v.formData.email.required" class="help is-danger">
                   Email is required! 🙇🏽‍♂️
                 </p>
-                <p v-if="!$v.email.email" class="help is-danger">
+                <p v-if="!$v.formData.email.email" class="help is-danger">
                   This email is invalid! 😞
                 </p>
               </template>
@@ -106,21 +100,21 @@
             <div class="control">
               <textarea
                 id="msg"
-                v-model="msg"
+                v-model="formData.msg"
                 class="textarea has-text-black"
                 rows="8"
                 name="msg"
                 required
-                @blur="$v.msg.$touch"
+                @blur="$v.formData.msg.$touch"
               />
             </div>
             <!-- .control -->
             <transition name="slide-fade" mode="out-in">
-              <template v-if="$v.msg.$error">
-                <p v-if="!$v.msg.required" class="help is-danger">
+              <template v-if="$v.formData.msg.$error">
+                <p v-if="!$v.formData.msg.required" class="help is-danger">
                   Please provide a few details!
                 </p>
-                <p v-if="!$v.msg.minLength" class="help is-danger">
+                <p v-if="!$v.formData.msg.minLength" class="help is-danger">
                   Please provide a little more detail... ✍️
                 </p>
               </template>
@@ -137,10 +131,10 @@
           <label class="checkbox" for="agreed">
             <input
               id="agreed"
-              v-model="agreed"
+              v-model="formData.agreed"
               type="checkbox"
               name="agreed"
-              @change="$v.agreed.$touch"
+              @change="$v.formData.agreed.$touch"
             />
             I understand that private information should not be included in my
             message because we cannot guarantee the security and confidentiality
@@ -150,7 +144,7 @@
         <!-- .control -->
 
         <transition name="slide-fade" mode="out-in">
-          <template v-if="$v.agreed.$error">
+          <template v-if="$v.formData.agreed.$error">
             <p class="help is-danger">
               Please confirm 👆🏽!
             </p>
@@ -229,12 +223,7 @@ export default {
   mixins: [validationMixin],
   data() {
     return {
-      fname: "",
-      lname: "",
-      email: "",
-      msg: "",
-      agreed: false,
-      formSubmissionError: false
+      formData: {}
     };
   },
   methods: {
@@ -248,22 +237,24 @@ export default {
     }
   },
   validations: {
-    fname: {
-      required
-    },
-    lname: {
-      required
-    },
-    email: {
-      required,
-      email
-    },
-    msg: {
-      minLength: minLength(50),
-      required
-    },
-    agreed: {
-      _: sameAs(() => true)
+    formData: {
+      fname: {
+        required
+      },
+      lname: {
+        required
+      },
+      email: {
+        required,
+        email
+      },
+      msg: {
+        minLength: minLength(50),
+        required
+      },
+      agreed: {
+        _: sameAs(() => true)
+      }
     }
   }
 };
