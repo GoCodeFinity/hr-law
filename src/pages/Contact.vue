@@ -192,29 +192,32 @@
       </transition>
     </form>
 
-    <div id="container--maps">
-      <div class="box">
-        <iframe
-          width="600"
-          height="450"
-          frameborder="0"
-          style="border:0"
-          src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJIbNa2wi12IcR-yph2CowriA&key=AIzaSyAL3yPJmXJ7qabe8MvegSh0mDLXHt4CwWY"
-          allowfullscreen
-        ></iframe>
-      </div>
+    <section class="section">
+      <h2 class="subtitle">Our Offices</h2>
+      <div id="container--maps">
+        <div class="box">
+          <iframe
+            width="600"
+            height="450"
+            frameborder="0"
+            style="border:0"
+            src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJIbNa2wi12IcR-yph2CowriA&key=AIzaSyAL3yPJmXJ7qabe8MvegSh0mDLXHt4CwWY"
+            allowfullscreen
+          ></iframe>
+        </div>
 
-      <div class="box">
-        <iframe
-          width="600"
-          height="450"
-          frameborder="0"
-          style="border:0"
-          src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJJwHGP4rEJIgRmehW1m2r068&key=AIzaSyAL3yPJmXJ7qabe8MvegSh0mDLXHt4CwWY"
-          allowfullscreen
-        ></iframe>
+        <div class="box">
+          <iframe
+            width="600"
+            height="450"
+            frameborder="0"
+            style="border:0"
+            src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJJwHGP4rEJIgRmehW1m2r068&key=AIzaSyAL3yPJmXJ7qabe8MvegSh0mDLXHt4CwWY"
+            allowfullscreen
+          ></iframe>
+        </div>
       </div>
-    </div>
+    </section>
   </Layout>
 </template>
 
