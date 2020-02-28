@@ -5,7 +5,13 @@
     </h1>
 
     <!-- Automatically filtered via Akismet. (https://www.netlify.com/blog/2019/02/12/improved-netlify-forms-spam-filtering-using-akismet/?_ga=2.21610226.87509668.1582861993-557186014.1574965950_-->
-    <form class="container" name="contact" method="POST" data-netlify="true">
+    <form
+      ref="form"
+      class="container"
+      name="contact"
+      method="POST"
+      data-netlify="true"
+    >
       <p>All fields required!</p>
       <div class="columns">
         <div class="column is-one-third">
@@ -154,8 +160,12 @@
           </button>
         </div>
         <div class="control">
-          <button class="button is-warning is-light" type="reset">
-            Cancel
+          <button
+            class="button is-warning is-light"
+            type="reset"
+            @click="$v.$reset"
+          >
+            Reset
           </button>
         </div>
       </div>
