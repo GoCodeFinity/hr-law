@@ -155,6 +155,7 @@
             class="button is-success"
             type="submit"
             :disabled="$v.$invalid"
+            @click="submit"
           >
             Submit
           </button>
@@ -170,6 +171,13 @@
         </div>
       </div>
       <!-- .field -->
+
+      <template v-if="formSubmissionError">
+        <p class="help is-danger">
+          Form is invalid! 😞 Please double check the above fields 👆🏽or just
+          give us a ring: <a href="tel:+13142414595">(314)241-4505</a>
+        </p>
+      </template>
     </form>
   </Layout>
 </template>
@@ -187,7 +195,18 @@ export default {
       email: "",
       msg: "",
       agreed: false
+      formSubmissionError: false
     };
+  },
+  methods: {
+    submit() {
+      this.$v.$touch();
+      if (this.$v.$invalid) {
+        this.formSubmissionError = !this.formSubmissionError;
+      } else {
+        document.forms[0].submit();
+      }
+    }
   },
   validations: {
     fname: {
