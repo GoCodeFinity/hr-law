@@ -43,7 +43,7 @@
           <p class="is-size-7">
             Have You Suffered From an Injury?
           </p>
-          <p class="is-size-1 is-size-3-mobile">
+          <p class="is-size-1 is-size-3-mobile" style="line-height: 1.33">
             You Deserve To Be Compensated!
           </p>
           <p class="has-text-weight-bold">
