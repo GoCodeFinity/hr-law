@@ -97,3 +97,18 @@ body > .navbar,
 .hero .navbar {
   border-radius: 0;
 }
+
+p {
+  margin: 1rem 0;
+  max-width: 60rem;
+  padding-right: 1.5rem;
+  text-align: justify;
+}
+
+.image img {
+  border-radius: 3px;
+}
+
+.is-pulled-left {
+  margin-right: 1rem;
+}
