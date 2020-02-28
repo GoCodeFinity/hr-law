@@ -14,6 +14,8 @@
       @submit.prevent="handleSubmit"
     >
       <p>All fields required!</p>
+      <input type="hidden" name="form-name" value="contact" />
+
       <div class="columns">
         <div class="column is-one-third">
           <div class="field">
