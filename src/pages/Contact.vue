@@ -11,7 +11,6 @@
       name="contact"
       method="POST"
       data-netlify="true"
-      @submit.prevent="handleSubmit"
     >
       <p>All fields required!</p>
       <input type="hidden" name="form-name" value="contact" />
@@ -70,7 +69,7 @@
 
           <div class="field">
             <label class="label" for="email">Email</label>
-            <div class="control has-icons-left has-icons-right">
+            <div class="control">
               <input
                 id="email"
                 v-model="formData.email"
@@ -162,7 +161,6 @@
             class="button is-success"
             type="submit"
             :disabled="$v.$invalid"
-            @click="submit"
           >
             Submit
           </button>
@@ -228,15 +226,6 @@ export default {
     return {
       formData: {}
     };
-  },
-  methods: {
-    handleSubmit() {
-      this.$v.$touch();
-      // If not invalid, proceed with submission
-      if (!this.$v.$invalid) {
-        document.forms[0].submit();
-      }
-    }
   },
   validations: {
     formData: {
