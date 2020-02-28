@@ -11,6 +11,7 @@
       name="contact"
       method="POST"
       data-netlify="true"
+      @submit.prevent="handleSubmit"
     >
       <p>All fields required!</p>
       <div class="columns">
@@ -177,7 +178,7 @@
       <!-- .field -->
 
       <transition name="slide-fade" mode="out-in">
-        <template v-if="formSubmissionError">
+        <template v-if="$v.$anyError">
           <p class="help is-danger">
             Form is invalid! 😞 Please double check the above fields 👆🏽or just
             give us a ring: <a href="tel:+13142414595">(314)241-4505</a>
@@ -227,11 +228,10 @@ export default {
     };
   },
   methods: {
-    submit() {
+    handleSubmit() {
       this.$v.$touch();
-      if (this.$v.$invalid) {
-        this.formSubmissionError = !this.formSubmissionError;
-      } else {
+      // If not invalid, proceed with submission
+      if (!this.$v.$invalid) {
         document.forms[0].submit();
       }
     }
