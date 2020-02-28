@@ -40,12 +40,12 @@
     <section v-if="showHero" class="hero">
       <div class="hero-body">
         <div class="container">
-          <p class="is-size-7">
+          <h2 class="is-size-7">
             Have You Suffered From an Injury?
-          </p>
-          <p class="is-size-1 is-size-3-mobile" style="line-height: 1.33">
+          </h2>
+          <h3 class="is-size-1 is-size-3-mobile" style="line-height: 1.33">
             You Deserve To Be Compensated!
-          </p>
+          </h3>
           <p class="has-text-weight-bold">
             At Horas, Radice &amp; Associates, we handle
             <strong>serious injury and wrongful death cases,</strong> as well as
