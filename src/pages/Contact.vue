@@ -19,7 +19,9 @@
                 name="fname"
               />
             </div>
+            <!--.control  -->
           </div>
+          <!-- .field -->
 
           <div class="field">
             <label class="label" for="lname">Last Name</label>
@@ -31,7 +33,9 @@
                 name="lname"
               />
             </div>
+            <!-- .control -->
           </div>
+          <!-- field -->
 
           <div class="field">
             <label class="label" for="email">Email</label>
@@ -51,7 +55,9 @@
             </div>
             <p class="help is-danger">This email is invalid</p>
           </div>
+          <!-- .field -->
         </div>
+        <!-- .column -->
 
         <div class="column">
           <div class="field">
@@ -64,9 +70,13 @@
                 id="msg"
               ></textarea>
             </div>
+            <!-- .control -->
           </div>
+          <!-- .field -->
         </div>
+        <!-- .column -->
       </div>
+      <!-- .columns -->
 
       <div class="field">
         <div class="control">
@@ -77,7 +87,9 @@
             of messages sent via the internet.
           </label>
         </div>
+        <!-- .control -->
       </div>
+      <!-- .field -->
 
       <div class="field is-grouped">
         <div class="control">
@@ -89,6 +101,7 @@
           </button>
         </div>
       </div>
+      <!-- .field -->
     </form>
   </Layout>
 </template>
