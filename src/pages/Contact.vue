@@ -198,9 +198,9 @@
           width="600"
           height="450"
           frameborder="0"
-          src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJIbNa2wi12IcR-yph2CowriA&key=AIzaSyAkyNiXIK26sPd1rM5TUDFOMakHTeMbrPo"
+          style="border:0"
+          src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJIbNa2wi12IcR-yph2CowriA&key=AIzaSyAL3yPJmXJ7qabe8MvegSh0mDLXHt4CwWY"
           allowfullscreen
-          class="column"
         ></iframe>
       </div>
 
@@ -209,9 +209,9 @@
           width="600"
           height="450"
           frameborder="0"
-          src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJJwHGP4rEJIgRmehW1m2r068&key=AIzaSyAkyNiXIK26sPd1rM5TUDFOMakHTeMbrPo"
+          style="border:0"
+          src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJJwHGP4rEJIgRmehW1m2r068&key=AIzaSyAL3yPJmXJ7qabe8MvegSh0mDLXHt4CwWY"
           allowfullscreen
-          class="column"
         ></iframe>
       </div>
     </div>
