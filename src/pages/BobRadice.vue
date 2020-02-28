@@ -5,7 +5,7 @@
     </h1>
 
     <section>
-      <h2 class="title is-2 is-size-4-mobile">About Mr. Radice</h2>
+      <h2 class="subtitle">About Mr. Radice</h2>
       <figure class="image is-256x256">
         <g-image
           src="~/assets/images/bob-radice.jpg"

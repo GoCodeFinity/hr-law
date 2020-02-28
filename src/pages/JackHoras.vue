@@ -5,7 +5,7 @@
     </h1>
 
     <section>
-      <h2 class="title is-2 is-size-4-mobile">About Mr. Horas</h2>
+      <h2 class="subtitle">About Mr. Horas</h2>
       <p>
         Jack is a lifelong resident of St. Louis, attending Vianney High School
         and is active in the St. Louis community. He attended the University of
