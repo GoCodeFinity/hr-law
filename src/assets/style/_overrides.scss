@@ -98,7 +98,7 @@ body > .navbar,
   border-radius: 0;
 }
 
-p {
+p:not(.message-body) {
   margin: 1rem 0;
   max-width: 60rem;
   padding-right: 1.5rem;

@@ -46,13 +46,16 @@
           <h3 class="is-size-1 is-size-3-mobile" style="line-height: 1.33">
             You Deserve To Be Compensated!
           </h3>
-          <p class="has-text-weight-bold">
-            At Horas, Radice &amp; Associates, we handle
-            <strong>serious injury and wrongful death cases,</strong> as well as
-            <strong
-              >legal services for small and medium-sized businesses.</strong
-            >
-          </p>
+          <div class="message">
+            <p class="message-body">
+              At Horas, Radice &amp; Associates, we handle
+              <strong>serious injury and wrongful death cases,</strong> as well
+              as
+              <strong
+                >legal services for small and medium-sized businesses.</strong
+              >
+            </p>
+          </div>
           <g-link
             to="/contact/"
             class="button is-link is-inverted is-uppercase has-text-weight-bold"
