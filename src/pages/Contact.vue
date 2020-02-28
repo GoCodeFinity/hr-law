@@ -31,11 +31,13 @@
             <!--.control  -->
 
             <!-- Must use 'v-if' and not 'v-if'. -->
-            <template v-if="$v.fname.$error">
-              <p v-if="!$v.fname.required" class="help is-danger">
-                First name is required! 🙇🏽‍♀️
-              </p>
-            </template>
+            <transition name="slide-fade" mode="out-in">
+              <template v-if="$v.fname.$error">
+                <p v-if="!$v.fname.required" class="help is-danger">
+                  First name is required! 🙇🏽‍♀️
+                </p>
+              </template>
+            </transition>
           </div>
           <!-- .field -->
 
@@ -53,11 +55,13 @@
               />
             </div>
             <!-- .control -->
-            <template v-if="$v.lname.$error">
-              <p v-if="!$v.lname.required" class="help is-danger">
-                Last name is required! 🙇🏽‍♀️
-              </p>
-            </template>
+            <transition name="slide-fade" mode="out-in">
+              <template v-if="$v.lname.$error">
+                <p v-if="!$v.lname.required" class="help is-danger">
+                  Last name is required! 🙇🏽‍♀️
+                </p>
+              </template>
+            </transition>
           </div>
           <!-- field -->
 
@@ -81,14 +85,16 @@
                 <i class="fas fa-exclamation-triangle" />
               </span>
             </div>
-            <template v-if="$v.email.$error">
-              <p v-if="!$v.email.required" class="help is-danger">
-                Email is required! 🙇🏽‍♂️
-              </p>
-              <p v-if="!$v.email.email" class="help is-danger">
-                This email is invalid! 😞
-              </p>
-            </template>
+            <transition name="slide-fade" mode="out-in">
+              <template v-if="$v.email.$error">
+                <p v-if="!$v.email.required" class="help is-danger">
+                  Email is required! 🙇🏽‍♂️
+                </p>
+                <p v-if="!$v.email.email" class="help is-danger">
+                  This email is invalid! 😞
+                </p>
+              </template>
+            </transition>
           </div>
           <!-- .field -->
         </div>
@@ -109,14 +115,16 @@
               />
             </div>
             <!-- .control -->
-            <template v-if="$v.msg.$error">
-              <p v-if="!$v.msg.required" class="help is-danger">
-                Please provide a few details!
-              </p>
-              <p v-if="!$v.msg.minLength" class="help is-danger">
-                Please provide a little more detail... ✍️
-              </p>
-            </template>
+            <transition name="slide-fade" mode="out-in">
+              <template v-if="$v.msg.$error">
+                <p v-if="!$v.msg.required" class="help is-danger">
+                  Please provide a few details!
+                </p>
+                <p v-if="!$v.msg.minLength" class="help is-danger">
+                  Please provide a little more detail... ✍️
+                </p>
+              </template>
+            </transition>
           </div>
           <!-- .field -->
         </div>
@@ -140,11 +148,14 @@
           </label>
         </div>
         <!-- .control -->
-        <template v-if="$v.agreed.$error">
-          <p class="help is-danger">
-            Please confirm 👆🏽!
-          </p>
-        </template>
+
+        <transition name="slide-fade" mode="out-in">
+          <template v-if="$v.agreed.$error">
+            <p class="help is-danger">
+              Please confirm 👆🏽!
+            </p>
+          </template>
+        </transition>
       </div>
       <!-- .field -->
 
@@ -171,12 +182,14 @@
       </div>
       <!-- .field -->
 
-      <template v-if="formSubmissionError">
-        <p class="help is-danger">
-          Form is invalid! 😞 Please double check the above fields 👆🏽or just
-          give us a ring: <a href="tel:+13142414595">(314)241-4505</a>
-        </p>
-      </template>
+      <transition name="slide-fade" mode="out-in">
+        <template v-if="formSubmissionError">
+          <p class="help is-danger">
+            Form is invalid! 😞 Please double check the above fields 👆🏽or just
+            give us a ring: <a href="tel:+13142414595">(314)241-4505</a>
+          </p>
+        </template>
+      </transition>
     </form>
   </Layout>
 </template>
@@ -228,3 +241,20 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" scoped>
+.slide-fade-enter {
+  opacity: 0;
+  transform: translateX(-10px);
+}
+
+.slide-fade-enter-active,
+.slide-fade-leave-active {
+  transition: all 0.2s ease;
+}
+
+.slide-fade-leave-to {
+  opacity: 0;
+  transform: translateX(10px);
+}
+</style>
