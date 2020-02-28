@@ -132,8 +132,7 @@
               v-model="agreed"
               type="checkbox"
               name="agreed"
-              required
-              @blur="$v.agreed.$touch"
+              @change="$v.agreed.$touch"
             />
             I understand that private information should not be included in my
             message because we cannot guarantee the security and confidentiality
@@ -142,7 +141,7 @@
         </div>
         <!-- .control -->
         <template v-if="$v.agreed.$error">
-          <p v-if="!agreed" class="help is-danger">
+          <p class="help is-danger">
             Please confirm 👆🏽!
           </p>
         </template>
@@ -184,7 +183,7 @@
 
 <script>
 import { validationMixin } from "vuelidate";
-import { email, minLength, required } from "vuelidate/lib/validators";
+import { email, minLength, required, sameAs } from "vuelidate/lib/validators";
 
 export default {
   mixins: [validationMixin],
@@ -194,7 +193,7 @@ export default {
       lname: "",
       email: "",
       msg: "",
-      agreed: false
+      agreed: false,
       formSubmissionError: false
     };
   },
@@ -224,7 +223,7 @@ export default {
       required
     },
     agreed: {
-      required
+      _: sameAs(() => true)
     }
   }
 };
