@@ -1,15 +1,5 @@
 <template>
-  <Layout>
-    <h1 class="title is-1 is-size-3-mobile">
-      Horas, Radice &amp; Associates
-    </h1>
-
-    <p class="has-text-weight-bold">
-      At Horas, Radice &amp; Associates, we handle
-      <strong>serious injury and wrongful death cases,</strong> as well as
-      <strong>legal services for small and medium-sized businesses.</strong>
-    </p>
-
+  <Layout :showHero="true">
     <h2 class="title is-2 is-size-4-mobile">Injury &amp; Wrongful Death</h2>
     <h3 class="subtitle is-4 is-size-5-mobile">Robert J. Radice</h3>
     <p>
