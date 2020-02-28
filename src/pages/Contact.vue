@@ -191,6 +191,30 @@
         </template>
       </transition>
     </form>
+
+    <div id="container--maps">
+      <div class="box">
+        <iframe
+          width="600"
+          height="450"
+          frameborder="0"
+          src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJIbNa2wi12IcR-yph2CowriA&key=AIzaSyAkyNiXIK26sPd1rM5TUDFOMakHTeMbrPo"
+          allowfullscreen
+          class="column"
+        ></iframe>
+      </div>
+
+      <div class="box">
+        <iframe
+          width="600"
+          height="450"
+          frameborder="0"
+          src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJJwHGP4rEJIgRmehW1m2r068&key=AIzaSyAkyNiXIK26sPd1rM5TUDFOMakHTeMbrPo"
+          allowfullscreen
+          class="column"
+        ></iframe>
+      </div>
+    </div>
   </Layout>
 </template>
 
@@ -243,6 +267,34 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "~bulma/sass/utilities/initial-variables.sass";
+
+#container--maps {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: calc(900px + 2.5rem);
+  margin: 1.25rem;
+
+  @media screen and (min-width: $widescreen) {
+    flex-direction: row;
+    height: calc(450px + 1.25rem);
+    justify-content: center;
+  }
+}
+
+.box {
+  padding: 0;
+
+  @media screen and (min-width: $widescreen) {
+    margin: 1rem;
+  }
+}
+
+iframe {
+  max-width: 100%;
+}
+
 .slide-fade-enter {
   opacity: 0;
   transform: translateX(-10px);
