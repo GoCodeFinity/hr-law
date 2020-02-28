@@ -6,7 +6,9 @@
 
     <div class="columns is-widescreen">
       <section class="column is-four-fifths">
-        <h2 class="subtitle">About Mr. Radice</h2>
+        <h2 class="subtitle">
+          About Mr. Radice
+        </h2>
         <figure class="image is-256x256 is-pulled-left">
           <g-image
             src="~/assets/images/bob-radice.jpg"
@@ -52,16 +54,34 @@
       </section>
 
       <section class="column">
-        <h2 class="subtitle is-size-4-mobile">Practice Areas</h2>
+        <h2 class="subtitle is-size-4-mobile">
+          Practice Areas
+        </h2>
         <ul class="list has-background-grey-dark">
-          <li class="list-item">Personal Injury</li>
-          <li class="list-item">Wrongful Death</li>
-          <li class="list-item">Automobile & Truck Accidents</li>
-          <li class="list-item">Automobile Insurance Policy Claims</li>
-          <li class="list-item">Workers’ Compensation</li>
-          <li class="list-item">Premises Liability</li>
-          <li class="list-item">Medical Malpractice</li>
-          <li class="list-item">Products Liability</li>
+          <li class="list-item">
+            Personal Injury
+          </li>
+          <li class="list-item">
+            Wrongful Death
+          </li>
+          <li class="list-item">
+            Automobile & Truck Accidents
+          </li>
+          <li class="list-item">
+            Automobile Insurance Policy Claims
+          </li>
+          <li class="list-item">
+            Workers’ Compensation
+          </li>
+          <li class="list-item">
+            Premises Liability
+          </li>
+          <li class="list-item">
+            Medical Malpractice
+          </li>
+          <li class="list-item">
+            Products Liability
+          </li>
         </ul>
       </section>
     </div>

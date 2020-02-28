@@ -13,35 +13,36 @@
             <label class="label" for="fname">First Name</label>
             <div class="control">
               <input
+                id="fname"
+                v-model="fname"
                 class="input has-text-black"
                 type="text"
-                id="fname"
                 name="fname"
-                v-model="fname"
                 required
+                @blur="$v.event.category.$touch()"
               />
             </div>
             <!--.control  -->
-            <p class="help is-danger" v-show="!$v.fname.required">
+            <p v-show="!$v.fname.required" class="help is-danger">
               First name is required! 🙇🏽‍♀️
             </p>
           </div>
           <!-- .field -->
 
           <div class="field">
-            <label class="label" for="lname">Last Name</label>
+            <label class="label" for="lname"> Last Name</label>
             <div class="control">
               <input
+                id="lname"
+                v-model="lname"
                 class="input has-text-black"
                 type="text"
-                id="lname"
                 name="lname"
-                v-model="lname"
                 required
               />
             </div>
             <!-- .control -->
-            <p class="help is-danger" v-show="!$v.lname.required">
+            <p v-show="!$v.lname.required" class="help is-danger">
               Last name is required! 🙇🏽‍♀️
             </p>
           </div>
@@ -51,25 +52,25 @@
             <label class="label" for="email">Email</label>
             <div class="control has-icons-left has-icons-right">
               <input
+                id="email"
+                v-model="email"
                 class="input is-danger has-text-black"
                 type="email"
-                id="email"
                 name="email"
-                v-model="email"
                 required
                 placeholder="✉️"
               />
               <span class="icon is-small is-left">
-                <i class="fas fa-envelope"></i>
+                <i class="fas fa-envelope" />
               </span>
               <span class="icon is-small is-right">
-                <i class="fas fa-exclamation-triangle"></i>
+                <i class="fas fa-exclamation-triangle" />
               </span>
             </div>
-            <p class="help is-danger" v-show="!$v.email.required">
+            <p v-show="!$v.email.required" class="help is-danger">
               Email is required! 🙇🏽‍♂️
             </p>
-            <p class="help is-danger" v-show="!$v.email.email">
+            <p v-show="!$v.email.email" class="help is-danger">
               This email is invalid! 😞
             </p>
           </div>
@@ -82,19 +83,19 @@
             <label class="label" for="msg">Message</label>
             <div class="control">
               <textarea
+                id="msg"
+                v-model="msg"
                 class="textarea has-text-black"
                 rows="8"
                 name="msg"
-                id="msg"
-                v-model="msg"
                 required
-              ></textarea>
+              />
             </div>
             <!-- .control -->
-            <p class="help is-danger" v-show="!$v.msg.required">
+            <p v-show="!$v.msg.required" class="help is-danger">
               Please provide a few details!
             </p>
-            <p class="help is-danger" v-show="!$v.msg.minLength">
+            <p v-show="!$v.msg.minLength" class="help is-danger">
               Please provide a little more detail... ✍️
             </p>
           </div>
@@ -108,10 +109,10 @@
         <div class="control">
           <label class="checkbox" for="agreed">
             <input
-              type="checkbox"
               id="agreed"
-              name="agreed"
               v-model="agreed"
+              type="checkbox"
+              name="agreed"
               required
             />
             I understand that private information should not be included in my
@@ -120,7 +121,7 @@
           </label>
         </div>
         <!-- .control -->
-        <p class="help is-danger" v-show="!agreed">
+        <p v-show="!agreed" class="help is-danger">
           Please confirm 👆🏽!
         </p>
       </div>

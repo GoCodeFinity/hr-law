@@ -6,7 +6,9 @@
 
     <div class="columns is-widescreen">
       <section class="column is-four-fifths">
-        <h2 class="subtitle">About Mr. Horas</h2>
+        <h2 class="subtitle">
+          About Mr. Horas
+        </h2>
         <p>
           Jack is a lifelong resident of St. Louis, attending Vianney High
           School and is active in the St. Louis community. He attended the
@@ -44,21 +46,37 @@
       </section>
 
       <section class="column">
-        <h2 class="subtitle">Practice Areas</h2>
+        <h2 class="subtitle">
+          Practice Areas
+        </h2>
         <ul class="list has-background-grey-dark">
-          <li class="list-item">Commercial Litigation</li>
+          <li class="list-item">
+            Commercial Litigation
+          </li>
           <li class="list-item">
             Construction (Litigation, Contracts and Mechanic Liens)
           </li>
-          <li class="list-item">Real Estate</li>
-          <li class="list-item">Shareholder Disputes</li>
+          <li class="list-item">
+            Real Estate
+          </li>
+          <li class="list-item">
+            Shareholder Disputes
+          </li>
           <li class="list-item">
             Business Organizations (including LLCs and Partnerships)
           </li>
-          <li class="list-item">Business Acquisitions and Sales</li>
-          <li class="list-item">Commercial Transactions</li>
-          <li class="list-item">Subrogation</li>
-          <li class="list-item">Arbitration/Mediation</li>
+          <li class="list-item">
+            Business Acquisitions and Sales
+          </li>
+          <li class="list-item">
+            Commercial Transactions
+          </li>
+          <li class="list-item">
+            Subrogation
+          </li>
+          <li class="list-item">
+            Arbitration/Mediation
+          </li>
         </ul>
       </section>
     </div>
