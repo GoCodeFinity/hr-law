@@ -53,38 +53,49 @@
               >legal services for small and medium-sized businesses.</strong
             >
           </p>
+          <button class="button is-link is-inverted">
+            <g-link to="/contact/" class="is-uppercase has-text-weight-bold"
+              >Contact Us!</g-link
+            >
+          </button>
         </div>
       </div>
     </section>
 
-    <main class="section">
-      <slot />
-    </main>
+    <transition name="fade" appear>
+      <main class="section">
+        <div class="container">
+          <slot />
+        </div>
+      </main>
+    </transition>
 
     <footer class="footer has-text-centered">
-      <a href="tel:+13142414595">(314)241-4505</a>
-      <div class="level is-mobile">
-        <div class="level-left">
-          <address class="level-item">
-            2123 Marconi Avenue<br />
-            "The Hill"<br />
-            St. Louis, MO 63110<br />
-          </address>
+      <div class="container">
+        <a href="tel:+13142414595">(314)241-4505</a>
+        <div class="level is-mobile">
+          <div class="level-left">
+            <address class="level-item">
+              2123 Marconi Avenue<br />
+              "The Hill"<br />
+              St. Louis, MO 63110<br />
+            </address>
+          </div>
+
+          <div class="level-right">
+            <address class="level-item">
+              1361 E. Big Beaver Road<br />
+              Troy, MI 48083<br />
+            </address>
+          </div>
         </div>
 
-        <div class="level-right">
-          <address class="level-item">
-            1361 E. Big Beaver Road<br />
-            Troy, MI 48083<br />
-          </address>
-        </div>
+        <span>Copyright © {{ new Date().getFullYear() }}. </span>
+        <span
+          >Powered by <a href="//gridsome.org"> Gridsome</a> &amp;
+          <a href="//codefinity.tech">CodeFinity</a></span
+        >
       </div>
-
-      <span>Copyright © {{ new Date().getFullYear() }}. </span>
-      <span
-        >Powered by <a href="//gridsome.org"> Gridsome</a> &amp;
-        <a href="//codefinity.tech">CodeFinity</a></span
-      >
     </footer>
   </div>
 </template>
@@ -111,3 +122,52 @@ export default {
   })
 };
 </script>
+
+<style lang="scss">
+// Just need the responsive variables
+@import "~bulma/sass/utilities/initial-variables.sass";
+
+.hero {
+  background: url("https://res.cloudinary.com/codefinity/image/upload/w_768/v1582854242/hero.jpg")
+    center center no-repeat;
+  background-size: cover;
+
+  .container {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+    padding: 1rem;
+  }
+
+  @media screen and (min-width: $tablet) {
+    background: url("https://res.cloudinary.com/codefinity/image/upload/w_960/v1582854242/hero.jpg")
+      center center no-repeat;
+    background-size: cover;
+  }
+
+  @media screen and (min-width: $desktop) {
+    background: url("https://res.cloudinary.com/codefinity/image/upload/w_1152/v1582854242/hero.jpg")
+      center center no-repeat;
+    background-size: cover;
+  }
+
+  @media screen and (min-width: $widescreen) {
+    background: url("https://res.cloudinary.com/codefinity/image/upload/w_1344/v1582854242/hero.jpg")
+      center center no-repeat;
+    background-size: cover;
+  }
+
+  @media screen and (min-width: $fullhd) {
+    background: url("https://res.cloudinary.com/codefinity/image/upload/w_2560/v1582854242/hero.jpg")
+      center center no-repeat;
+    background-size: cover;
+  }
+}
+
+.fade-enter-active {
+  transition: opacity 0.5s;
+}
+
+.fade-enter {
+  opacity: 0;
+}
+</style>
