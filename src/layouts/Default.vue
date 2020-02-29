@@ -58,7 +58,7 @@
           </div>
           <g-link
             to="/contact/"
-            class="button is-link is-inverted is-uppercase has-text-weight-bold"
+            class="button is-link is-inverted is-uppercase has-text-weight-bold has-text-primary"
             >Contact Us!</g-link
           >
         </div>
