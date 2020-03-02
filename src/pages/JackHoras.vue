@@ -85,6 +85,6 @@
 
 <script>
 export default {
-  metaInfo: "Bob Radice"
+  metaInfo: "Jack Horas"
 };
 </script>

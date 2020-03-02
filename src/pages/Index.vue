@@ -28,7 +28,7 @@
 <script>
 export default {
   metaInfo: {
-    title: "Horas, Radice & Associates"
+    title: "Horas, Radice & Associates, LLC"
   }
 };
 </script>

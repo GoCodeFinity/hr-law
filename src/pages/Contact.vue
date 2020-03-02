@@ -221,6 +221,7 @@ import { validationMixin } from "vuelidate";
 import { email, minLength, required, sameAs } from "vuelidate/lib/validators";
 
 export default {
+  metaInfo: "Contact Us",
   mixins: [validationMixin],
   data() {
     return {
