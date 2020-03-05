@@ -9,6 +9,13 @@
         <h2 class="subtitle">
           About Mr. Horas
         </h2>
+        <figure class="image is-256x256 is-pulled-left">
+          <g-image
+            src="~/assets/images/jack-horas.jpg"
+            alt="Middle aged Caucasian male with a slight smile wearing a reddish tie, light blue button down shirt and dark patterned suit coat."
+            width="350"
+          />
+        </figure>
         <p>
           Jack is a lifelong resident of St. Louis, attending Vianney High
           School and is active in the St. Louis community. He attended the
