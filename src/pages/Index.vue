@@ -2,7 +2,7 @@
   <Layout :show-hero="true">
     <h2 class="title is-2 is-size-4-mobile">Injury &amp; Wrongful Death</h2>
     <h3 class="subtitle is-4 is-size-5-mobile">
-      <g-link to="/bob-radice">J. Radice</g-link>
+      <g-link to="/bob-radice">Bob Radice</g-link>
     </h3>
     <p>
       Under the leadership of Robert J. Radice, our firm has over 35 years of
@@ -14,7 +14,7 @@
 
     <h2 class="title is-2 is-size-4-mobile">Business Law</h2>
     <h3 class="subtitle is-4 is-size-5-mobile">
-      <g-link to="/jack-horas/"> M. Horas</g-link>
+      <g-link to="/jack-horas/"> John Horas</g-link>
     </h3>
     <p>
       Under the leadership of John M. Horas, our firm has more than 30 years of

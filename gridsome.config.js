@@ -1,4 +1,4 @@
 module.exports = {
-  siteName: "Horace, Radice & Associates, LLC",
+  siteName: "Horas, Radice & Associates, LLC",
   siteDescription: "Personal Injury & Business Law Attorneys"
 };
